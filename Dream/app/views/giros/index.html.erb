@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Giros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numtarjeta</th>
+      <th>Fecha</th>
+      <th>Valor</th>
+      <th>Pasarela</th>
+      <th>Datos</th>
+      <th>References</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @giros.each do |giro| %>
+      <tr>
+        <td><%= giro.numTarjeta %></td>
+        <td><%= giro.fecha %></td>
+        <td><%= giro.valor %></td>
+        <td><%= giro.pasarela %></td>
+        <td><%= giro.datos %></td>
+        <td><%= giro.references %></td>
+        <td><%= link_to 'Show', giro %></td>
+        <td><%= link_to 'Edit', edit_giro_path(giro) %></td>
+        <td><%= link_to 'Destroy', giro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Giro', new_giro_path %>

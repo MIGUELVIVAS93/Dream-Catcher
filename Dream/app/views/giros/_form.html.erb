@@ -1,0 +1,47 @@
+<%= form_for(giro) do |f| %>
+  <% if giro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(giro.errors.count, "error") %> prohibited this giro from being saved:</h2>
+
+      <ul>
+      <% giro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numTarjeta %>
+    <%= f.number_field :numTarjeta %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fecha %>
+    <%= f.date_select :fecha %>
+  </div>
+
+  <div class="field">
+    <%= f.label :valor %>
+    <%= f.number_field :valor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pasarela %>
+    <%= f.number_field :pasarela %>
+  </div>
+
+  <div class="field">
+    <%= f.label :datos %>
+    <%= f.text_field :datos %>
+  </div>
+
+  <div class="field">
+    <%= f.label :references %>
+    <%= f.text_field :references %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

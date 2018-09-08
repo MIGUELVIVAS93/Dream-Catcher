@@ -1,0 +1,2 @@
+class Giro < ApplicationRecord
+end

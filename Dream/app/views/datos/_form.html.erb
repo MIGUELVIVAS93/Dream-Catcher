@@ -1,0 +1,57 @@
+<%= form_for(dato) do |f| %>
+  <% if dato.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dato.errors.count, "error") %> prohibited this dato from being saved:</h2>
+
+      <ul>
+      <% dato.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %>
+    <%= f.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= f.label :documento %>
+    <%= f.text_field :documento %>
+  </div>
+
+  <div class="field">
+    <%= f.label :numdocumento %>
+    <%= f.number_field :numdocumento %>
+  </div>
+
+  <div class="field">
+    <%= f.label :telefono %>
+    <%= f.number_field :telefono %>
+  </div>
+
+  <div class="field">
+    <%= f.label :correo %>
+    <%= f.text_field :correo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pais %>
+    <%= f.text_field :pais %>
+  </div>
+
+  <div class="field">
+    <%= f.label :usuario %>
+    <%= f.text_field :usuario %>
+  </div>
+
+  <div class="field">
+    <%= f.label :usuario_id %>
+    <%= f.text_field :usuario_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

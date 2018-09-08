@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numtarjeta:</strong>
+  <%= @giro.numTarjeta %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @giro.fecha %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @giro.valor %>
+</p>
+
+<p>
+  <strong>Pasarela:</strong>
+  <%= @giro.pasarela %>
+</p>
+
+<p>
+  <strong>Datos:</strong>
+  <%= @giro.datos %>
+</p>
+
+<p>
+  <strong>References:</strong>
+  <%= @giro.references %>
+</p>
+
+<%= link_to 'Edit', edit_giro_path(@giro) %> |
+<%= link_to 'Back', giros_path %>
